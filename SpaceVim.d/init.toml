@@ -25,8 +25,9 @@
   enable_tabline_filetype_icon = false
   enable_statusline_mode = false
   statusline_unicode_symbols = false
-  # Enable vim compatible mode, avoid changing origin vim key bindings
-  vimcompatible = true
+
+  filemanager = "defx"
+  filetree_direction = "left"
 
 # Enable autocomplete layer
 [[layers]]
@@ -41,3 +42,9 @@
 
 [[layers]]
   name = "colorscheme"
+
+[[layers]]
+  name = "lang#typescript"
+
+[[custom_plugins]]
+  name = "MaxMEllon/vim-jsx-pretty"
