@@ -2,3 +2,4 @@
 set -U fish_greeting ""
 
 set -Ux EDITOR nvim
+set -x LC_ALL en_US.UTF-8
