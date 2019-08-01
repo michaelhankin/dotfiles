@@ -8,5 +8,8 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
+" Enable italics
+let g:gruvbox_italic=1
+
 " Set color scheme
 colorscheme gruvbox
