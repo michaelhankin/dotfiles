@@ -13,3 +13,28 @@ let g:gruvbox_italic=1
 
 " Set color scheme
 colorscheme gruvbox
+
+" Disable swap files
+set noswapfile
+
+" Disable backup files
+set nobackup
+
+" By default, <Tab> at the beginning of a line will always insert 4 spaces
+set shiftwidth=4
+
+" Use <C-L> to clear the highlighting of :set hlsearch
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+endif
+
+" Keep 1 line above and below the cursor while scolling
+set scrolloff=1
+
+" Override the 'ignorecase' option if the search pattern contains uppercase characters
+set smartcase
+
+" Show line number in front of current line, and number relative to the cursor on all others
+set number
+set relativenumber
+
