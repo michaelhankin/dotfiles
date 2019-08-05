@@ -1,3 +1,7 @@
+# Aliases
+alias vi='nvim'
+alias view='nvim -M'
+
 # Erase fish greeting
 set -U fish_greeting ""
 
