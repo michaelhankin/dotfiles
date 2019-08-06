@@ -22,8 +22,8 @@ set noswapfile
 " Disable backup files
 set nobackup
 
-" By default, <Tab> at the beginning of a line will always insert 4 spaces
-set shiftwidth=4
+" By default, <Tab> at the beginning of a line will always insert 2 spaces
+set shiftwidth=2
 
 " Use <C-L> to clear the highlighting of :set hlsearch
 if maparg('<C-L>', 'n') ==# ''
