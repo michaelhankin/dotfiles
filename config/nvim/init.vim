@@ -30,9 +30,9 @@ set nobackup
 " Always use the appropriate number of spaces for a <Tab> in insert mode
 set expandtab
 " Show existing tabs as 2 spaces
-set tabstop = 2
+set tabstop=2
 " Effectively sets shiftwidth = tabstop, meaning that auto-indent inserts 2 spaces
-set shiftwidth = 0
+set shiftwidth=0
 
 " Use <C-L> to clear the highlighting of :set hlsearch
 if maparg('<C-L>', 'n') ==# ''
@@ -56,11 +56,11 @@ set relativenumber
 
 "" morhetz/gruvbox
 " Enable italics
-let g:gruvbox_italic = 1
+let g:gruvbox_italic=1
 " Set color scheme
 colorscheme gruvbox
 
 "" MaxMEllon/vim-jsx-pretty
 " Enable extra colors, requires pangloss/vim-javascript
-let g:vim_jsx_pretty_colorful_config = 1
+let g:vim_jsx_pretty_colorful_config=1
 
