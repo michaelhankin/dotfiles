@@ -10,9 +10,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -49,6 +47,15 @@ set smartcase
 set number
 set relativenumber
 
+" Highlight the screen line that the cursor is currently on
+set cursorline
+
+" Don't show mode on last line; not needed thanks to lightline
+set noshowmode
+
+" Always show signcolumn
+set signcolumn=yes
+
 
 """""""""""""""""
 """ Plugin config
@@ -56,11 +63,14 @@ set relativenumber
 
 "" morhetz/gruvbox
 " Enable italics
-let g:gruvbox_italic=1
+let g:gruvbox_italic = 1
 " Set color scheme
 colorscheme gruvbox
 
-"" MaxMEllon/vim-jsx-pretty
-" Enable extra colors, requires pangloss/vim-javascript
-let g:vim_jsx_pretty_colorful_config=1
+"" itchyny/lightline
+let g:lightline = {
+      \   'colorscheme': 'gruvbox',
+      \   'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+      \   'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
+      \ }
 
