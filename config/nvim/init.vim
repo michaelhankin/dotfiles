@@ -10,7 +10,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'itchyny/lightline.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -50,11 +51,21 @@ set relativenumber
 " Highlight the screen line that the cursor is currently on
 set cursorline
 
-" Don't show mode on last line; not needed thanks to lightline
+" Don't show mode on last line; not needed thanks to airline
 set noshowmode
 
 " Always show signcolumn
 set signcolumn=yes
+
+" Easier split navigation
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
+" Open new split panes to the right and bottom
+set splitbelow
+set splitright
 
 
 """""""""""""""""
@@ -67,10 +78,11 @@ let g:gruvbox_italic = 1
 " Set color scheme
 colorscheme gruvbox
 
-"" itchyny/lightline
-let g:lightline = {
-      \   'colorscheme': 'gruvbox',
-      \   'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
-      \   'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
-      \ }
+"" vim-airline/vim-airline
+" Enable tabline
+let g:airline#extensions#tabline#enabled = 1
+" Show buffer numbers
+let g:airline#extensions#tabline#buffer_nr_show = 1
+" Enable powerline symbols
+let g:airline_powerline_fonts = 1
 
