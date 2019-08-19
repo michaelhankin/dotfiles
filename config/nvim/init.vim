@@ -33,9 +33,9 @@ set tabstop=2
 " Effectively sets shiftwidth = tabstop, meaning that auto-indent inserts 2 spaces
 set shiftwidth=0
 
-" Use <C-L> to clear the highlighting of :set hlsearch
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+" Use <C-I> to clear the highlighting of :set hlsearch
+if maparg('<C-I>', 'n') ==# ''
+  nnoremap <silent> <C-I> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-I>
 endif
 
 " Keep 1 line above and below the cursor while scolling
@@ -75,6 +75,8 @@ set splitright
 "" morhetz/gruvbox
 " Enable italics
 let g:gruvbox_italic = 1
+" Disable bold text
+let g:gruvbox_bold = 0
 " Set color scheme
 colorscheme gruvbox
 
