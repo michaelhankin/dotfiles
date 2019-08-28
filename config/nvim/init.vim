@@ -8,9 +8,6 @@ set termguicolors
 " Add plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'morhetz/gruvbox'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'vim-airline/vim-airline'
 
 call plug#end()
@@ -72,19 +69,9 @@ set splitright
 """ Plugin config
 """""""""""""""""
 
-"" morhetz/gruvbox
-" Enable italics
-let g:gruvbox_italic = 1
-" Disable bold text
-let g:gruvbox_bold = 0
-" Set color scheme
-colorscheme gruvbox
-
 "" vim-airline/vim-airline
 " Enable tabline
 let g:airline#extensions#tabline#enabled = 1
 " Show buffer numbers
 let g:airline#extensions#tabline#buffer_nr_show = 1
-" Enable powerline symbols
-let g:airline_powerline_fonts = 1
 
