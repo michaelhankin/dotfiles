@@ -9,6 +9,9 @@ set termguicolors
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 call plug#end()
 
@@ -70,8 +73,16 @@ set splitright
 """""""""""""""""
 
 "" vim-airline/vim-airline
+
 " Enable tabline
 let g:airline#extensions#tabline#enabled = 1
 " Show buffer numbers
 let g:airline#extensions#tabline#buffer_nr_show = 1
+
+"" prettier/vim-prettier
+
+" auto-format before saving, changing text, or leaving insert mode
+let g:prettier#quickfix_enabled = 0
+let g:prettier#autoformat = 0
+autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
