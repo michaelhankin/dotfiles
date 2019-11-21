@@ -81,8 +81,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 
 "" prettier/vim-prettier
 
-" auto-format before saving, changing text, or leaving insert mode
-let g:prettier#quickfix_enabled = 0
+" Auto-format on save
 let g:prettier#autoformat = 0
-autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
