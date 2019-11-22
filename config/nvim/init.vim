@@ -86,3 +86,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 
+"" mhartington/nvim-typescript
+" Enable default key mappings
+let g:nvim_typescript#default_mappings = 1
+
