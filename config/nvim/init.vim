@@ -1,6 +1,6 @@
-"""""""""
+"""""""""""""
 """ Setup
-"""""""""
+"""""""""""""
 
 " Enable true color
 set termguicolors
@@ -13,15 +13,20 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
+" Deoplete and dependencies
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/context_filetype.vim'
+Plug 'Shougo/echodoc.vim'
+
 call plug#end()
 
 
-""""""""""""""""""
+""""""""""""""""""""""
 """ General config
-""""""""""""""""""
+""""""""""""""""""""""
 
-" Remap leader key to ';'
-let mapleader=";"
+" Remap leader key to ','
+let mapleader=","
 
 " Disable swap files
 set noswapfile
@@ -36,9 +41,9 @@ set tabstop=2
 " Effectively sets shiftwidth = tabstop, meaning that auto-indent inserts 2 spaces
 set shiftwidth=0
 
-" Use <C-L> to clear the highlighting of :set hlsearch
-if maparg('<C-L>', 'n') ==# ''
-  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+" Use <C-N> to clear the highlighting of :set hlsearch
+if maparg('<C-N>', 'n') ==# ''
+  nnoremap <silent> <C-N> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR>
 endif
 
 " Keep 1 line above and below the cursor while scolling
@@ -61,19 +66,25 @@ set noshowmode
 set signcolumn=yes
 
 " Easier split navigation
-nnoremap <Leader>H <C-W><C-H>
-nnoremap <Leader>J <C-W><C-J>
-nnoremap <Leader>K <C-W><C-K>
-nnoremap <Leader>L <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
 
 " Open new split panes to the right and bottom
 set splitbelow
 set splitright
 
+" Shortcuts for common write/quit commands
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :wq<CR>
+nnoremap <Leader>x :q!<CR>
+nnoremap <Leader>a :qa<CR>
 
-"""""""""""""""""
+
+"""""""""""""""""""""
 """ Plugin config
-"""""""""""""""""
+"""""""""""""""""""""
 
 "" vim-airline/vim-airline
 " Enable tabline
@@ -89,4 +100,14 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 "" mhartington/nvim-typescript
 " Enable default key mappings
 let g:nvim_typescript#default_mappings = 1
+
+"" Shougo/deoplete
+" Enable at start-up
+let g:deoplete#enable_at_startup = 1
+
+"" Shougo/echodoc.vim
+" Enable at start-up
+let g:echodoc#enable_at_startup = 1
+" Display docs in floating window
+let g:echodoc#type = 'floating'
 
