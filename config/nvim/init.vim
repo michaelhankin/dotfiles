@@ -49,6 +49,8 @@ endif
 " Keep 1 line above and below the cursor while scolling
 set scrolloff=1
 
+" Ignore case when searching in a file
+set ignorecase
 " Override the 'ignorecase' option if the search pattern contains uppercase characters
 set smartcase
 
