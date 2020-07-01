@@ -2,7 +2,7 @@
 alias vi='nvim'
 alias view='nvim -M'
 alias python='python3'
-alias pip='pip3'
+alias pip='python -m pip'
 alias rmd='rm -rf'
 
 # Erase fish greeting
