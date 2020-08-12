@@ -36,8 +36,8 @@ set nobackup
 
 " Always use the appropriate number of spaces for a <Tab> in insert mode
 set expandtab
-" Show existing tabs as 2 spaces
-set tabstop=2
+" Show existing tabs as 4 spaces
+set tabstop=4
 " Effectively sets shiftwidth = tabstop, meaning that auto-indent inserts 2 spaces
 set shiftwidth=0
 
@@ -79,7 +79,7 @@ set splitright
 
 " Shortcuts for common write/quit commands
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :wq<CR>
+nnoremap <Leader>z :wq<CR>
 nnoremap <Leader>x :q!<CR>
 nnoremap <Leader>a :qa<CR>
 

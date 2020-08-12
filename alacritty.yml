@@ -65,6 +65,10 @@ window:
   # Window title
   #title: Alacritty
 
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
+
+
   # Window class (Linux only):
   #class: Alacritty
 
@@ -248,7 +252,7 @@ colors:
 #   - Linear
 #
 # Specifying a `duration` of `0` will disable the visual bell.
-visual_bell:
+bell:
   animation: EaseOutExpo
   duration: 0
   color: '0xffffff'
@@ -316,9 +320,6 @@ selection:
 
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: false
-
-# Allow terminal applications to change Alacritty's window title.
-dynamic_title: true
 
 cursor:
   # Cursor style
@@ -514,6 +515,8 @@ key_bindings:
 
   # Segment completion for fish shell
   - { key: F,        mods: Alt,     chars: "\x1bf"                           }
+  # Spawn new window
+  - { key: N,        mods: Command, action: SpawnNewInstance                 }
 
   - { key: Paste,                   action: Paste                            }
   - { key: Copy,                    action: Copy                             }
