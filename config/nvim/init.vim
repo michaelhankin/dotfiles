@@ -9,9 +9,7 @@ set termguicolors
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'sheerun/vim-polyglot'
 
 " Deoplete and dependencies
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -93,15 +91,6 @@ nnoremap <Leader>a :qa<CR>
 let g:airline#extensions#tabline#enabled = 1
 " Show buffer numbers
 let g:airline#extensions#tabline#buffer_nr_show = 1
-
-"" prettier/vim-prettier
-" Auto-format on save
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-
-"" mhartington/nvim-typescript
-" Enable default key mappings
-let g:nvim_typescript#default_mappings = 1
 
 "" Shougo/deoplete
 " Enable at start-up
