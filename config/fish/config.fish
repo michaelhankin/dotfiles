@@ -1,10 +1,7 @@
 # Aliases
 alias vi='nvim'
 alias view='nvim -M'
-alias python='python3'
-alias pip='python -m pip'
 alias rmd='rm -rf'
-alias brew_up='brew upgrade && brew cask upgrade'
 
 # Erase fish greeting
 set -U fish_greeting ""
