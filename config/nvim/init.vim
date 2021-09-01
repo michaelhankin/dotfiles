@@ -36,7 +36,7 @@ set nobackup
 set expandtab
 " Show existing tabs as 4 spaces
 set tabstop=4
-" Effectively sets shiftwidth = tabstop, meaning that auto-indent inserts 2 spaces
+" Effectively sets shiftwidth = tabstop, meaning that auto-indent inserts 4 spaces
 set shiftwidth=0
 
 " Use <C-N> to clear the highlighting of :set hlsearch
@@ -80,6 +80,10 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>z :wq<CR>
 nnoremap <Leader>x :q!<CR>
 nnoremap <Leader>a :qa<CR>
+
+" Automatically change current working directory when opening a file,
+" switching buffers, etc.
+set autochdir
 
 
 """""""""""""""""""""
