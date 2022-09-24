@@ -77,9 +77,10 @@ set splitright
 
 " Shortcuts for common write/quit commands
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
 nnoremap <Leader>z :wq<CR>
 nnoremap <Leader>x :q!<CR>
-nnoremap <Leader>a :qa<CR>
+nnoremap <Leader>a :wqa<CR>
 
 " Automatically change current working directory when opening a file,
 " switching buffers, etc.
