@@ -3,3 +3,5 @@ name = Michael Hankin
 email = me@michaelhankin.com
 [pull]
 	rebase = true
+[core]
+	excludesfile = ~/.gitignore_global

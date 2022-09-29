@@ -56,8 +56,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Add homebrew to path
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Environment variables
 export EDITOR='nvim'
+export PYENV_ROOT=~/.pyenv
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -75,12 +79,12 @@ export EDITOR='nvim'
 alias ..="cd .."
 alias ~="cd"
 alias z="nvim ~/.zshrc"
-alias k="kubectl"
 alias sz="source ~/.zshrc"
-alias python="python3"
 alias pip="python -m pip"
 alias rmd="rm -rf"
 alias vi="nvim"
+alias v="vi ~/.config/nvim/init.vim"
+alias t="vi ~/.tmux.conf"
 
 # Functions
 function mcd() {
@@ -89,5 +93,8 @@ function mcd() {
 }
 
 # Shell completions
-source <(kubectl completion zsh | sed s/kubectl/k/g)
+
+# Set up pyenv
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
